@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Person Chat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="joinScreen">
+            <h1>2 Person Chat</h1>
+
+            <p>Enter a Room Code</p>
+
+            <input
+                type="text"
+                id="roomCode"
+                placeholder="Room Code"
+                autocomplete="off"
+            >
+
+            <button id="joinButton">Join Room</button>
+
+            <p id="joinError" class="error"></p>
+        </div>
+
+
+        <div id="chatScreen" class="hidden">
+
+            <h2>Chat Room</h2>
+
+            <p id="status">Waiting for second person...</p>
+
+            <div id="messages"></div>
+
+            <div class="messageArea">
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message..."
+                    autocomplete="off"
+                >
+
+                <button id="sendButton">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
