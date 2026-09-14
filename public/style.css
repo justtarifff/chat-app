@@ -1,16 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
+    background: #f4f5f7;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* JOIN SCREEN */
+
+#joinScreen {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 100px;
 }
 
-input {
-    padding: 10px;
-    font-size: 16px;
+#joinScreen h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
+#joinScreen p {
+    margin: 6px 0 18px;
+    color: #666;
+}
+
+#roomCode {
+    width: 100%;
+    max-width: 350px;
+    padding: 14px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+#joinButton {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 12px;
+    padding: 14px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
     cursor: pointer;
+}
+
+/* CHAT SCREEN */
+
+#chatScreen h2 {
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+#status {
+    text-align: center;
+    color: #666;
+    margin: 0 0 15px;
+}
+
+/* VERY IMPORTANT */
+.hidden {
+    display: none !important;
+}
+
+#messages {
+    height: 55vh;
+    min-height: 300px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+/* MESSAGE BUBBLES */
+
+.message {
+    width: fit-content;
+    max-width: 75%;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border-radius: 14px;
+    word-wrap: break-word;
+}
+
+.myMessage {
+    margin-left: auto;
+    background: #222;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.otherMessage {
+    margin-right: auto;
+    background: #e4e6eb;
+    color: #222;
+    border-bottom-left-radius: 4px;
+}
+
+/* MESSAGE INPUT */
+
+.messageArea {
+    display: flex;
+    gap: 8px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 13px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+#sendButton {
+    padding: 13px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    min-height: 20px;
 }
